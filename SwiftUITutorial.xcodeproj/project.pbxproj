@@ -51,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9618BCF722ABAE210027F5C9 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				96282B9522AB122C0054C4EF /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		96282B8B22AAF52A0054C4EF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +94,7 @@
 		964FD32B22A8489D008C719D /* SwiftUITutorial */ = {
 			isa = PBXGroup;
 			children = (
-				96282B9522AB122C0054C4EF /* API.swift */,
+				9618BCF722ABAE210027F5C9 /* API */,
 				96282B9022AB020D0054C4EF /* Models */,
 				96282B8B22AAF52A0054C4EF /* Extensions */,
 				9656182D22A9A802009C6666 /* Views */,
