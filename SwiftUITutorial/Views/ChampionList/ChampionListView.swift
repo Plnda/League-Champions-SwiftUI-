@@ -20,7 +20,6 @@ struct ChampionListView : View {
 				ChampionCell(champion: champion)
 			}
 			.navigationBarTitle(Text("Champions"))
-			.onAppear { self.viewModel.onAppear() }
 		}
 	}
 }

@@ -24,9 +24,11 @@ class ChampionsListViewModel: BindableObject {
 	
 	init(with api: LeagueAPI = LeagueAPI()) {
 		self.api = api
+		
+		fetch()
 	}
 	
-	func onAppear() {
+	func fetch() {
 
 		_ = api.getChampions().sink { [weak self] champions in
 			self?.champions = champions.sorted(by: { $0.name < $1.name })
