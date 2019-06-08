@@ -29,7 +29,7 @@ class ChampionsListViewModel: BindableObject {
 	func onAppear() {
 
 		_ = api.getChampions().sink { [weak self] champions in
-			self?.champions = champions
+			self?.champions = champions.sorted(by: { $0.name < $1.name })
 		}
 	}
 }

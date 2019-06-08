@@ -11,7 +11,8 @@ import SwiftUI
 
 struct ChampionListView : View {
 
-	@EnvironmentObject var viewModel: ChampionsListViewModel
+	@ObjectBinding
+	var viewModel: ChampionsListViewModel
 	
 	var body: some View {
 		NavigationView {
@@ -27,7 +28,7 @@ struct ChampionListView : View {
 #if DEBUG
 struct ChampionListView_Previews : PreviewProvider {
 	static var previews: some View {
-		ChampionListView().environmentObject(ChampionsListViewModel())
+		ChampionListView(viewModel: ChampionsListViewModel())
 	}
 }
 #endif

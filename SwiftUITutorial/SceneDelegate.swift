@@ -22,8 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
 		let championListViewModel = ChampionsListViewModel()
 		
-		let championListView = ChampionListView()
-			.environmentObject(championListViewModel)
+		let championListView = ChampionListView(viewModel: championListViewModel)
 		
 		let window = UIWindow(frame: UIScreen.main.bounds)
 		window.rootViewController = UIHostingController(rootView: championListView)
