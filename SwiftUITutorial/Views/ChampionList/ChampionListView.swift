@@ -17,7 +17,9 @@ struct ChampionListView : View {
 	var body: some View {
 		NavigationView {
 			List(viewModel.champions) { champion in
-				ChampionCell(champion: champion)
+				NavigationButton(destination: ChampionDetailView(champion: champion)) {
+					ChampionCell(champion: champion)
+				}
 			}
 			.navigationBarTitle(Text("Champions"))
 		}

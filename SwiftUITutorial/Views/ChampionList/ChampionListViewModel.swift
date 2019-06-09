@@ -11,7 +11,7 @@ import SwiftUI
 import Combine
 
 class ChampionsListViewModel: BindableObject {
-	
+
 	var didChange = PassthroughSubject<Void, Never>()
 
 	private(set) var champions: [Champion] = [] {

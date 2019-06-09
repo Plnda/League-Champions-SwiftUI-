@@ -14,13 +14,20 @@ struct ChampionCell: View {
 
 	var body: some View {
 		HStack {
-			RoundedImage(urlString: champion.imageURL)
+			
+			RemoteImage(urlString: champion.artworkImageString)
+				.frame(width: 50, height: 50, alignment: .center)
+				.clipShape(Circle())
+				.shadow(radius: 1)
+				.overlay(Circle().stroke(Color.white, lineWidth: 1))
+		
 			VStack(alignment: .leading) {
 				Text(champion.name).font(.headline)
 				HStack {
-					Text(champion.title).font(.caption)
+					Text(champion.title.capitalized).font(.caption)
 				}
 			}
+			
 			Spacer()
 		}
 	}

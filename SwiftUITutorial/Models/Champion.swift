@@ -25,7 +25,11 @@ struct Champion: Decodable, Hashable, Identifiable {
 	let title: String
 	let description: String
 
-	var imageURL: String {
+	var artworkImageString: String {
 		return "https://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/\(name).png"
+	}
+	
+	var splashImageString: String {
+		return "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/\(name)_0.jpg"
 	}
 }
